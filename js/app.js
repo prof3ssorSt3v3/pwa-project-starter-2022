@@ -16,8 +16,8 @@ const APP = {
         //register the service worker
 
         //then add listeners and run page specific code
-        APP.pageSpecific();
         APP.addListeners();
+        APP.pageSpecific();
     },
     openDatabase: (nextStep)=>{
         //open the database
@@ -119,6 +119,9 @@ const APP = {
         //check in DB for match of movieid in suggestStore
         //if no match in DB do a fetch 
         // APP.displayCards is the callback
+    },
+    displayPreviousSearchList: () => {
+        //show the list of previous search keywords as links to results page
     },
     displayCards: ()=>{
         //display all the movie cards based on the results array
